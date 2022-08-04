@@ -1,3 +1,2 @@
 resources:
-- input-acm/operator-group.yaml
-- input-acm/subscription.yaml
+- input-odf/policy-odf.yaml
