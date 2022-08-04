@@ -8,5 +8,3 @@ spec:
   channel: release-2.4
   installPlanApproval: Automatic
   name: advanced-cluster-management
-  type: Git
-  pathname: https://github.com/stolostron/policy-collection.git
