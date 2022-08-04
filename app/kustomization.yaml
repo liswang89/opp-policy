@@ -1,2 +1,2 @@
 resources:
-- test.yaml
+- input-acm/operator-group.yaml
