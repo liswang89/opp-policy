@@ -1,0 +1,3 @@
+resources:
+- input-acm/operator-group.yaml
+- input-acm/subscription.yaml
