@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: openshift-storage
 ---
-apiVersion: operators.coreos.com/v1
+apiVersion: operators.coreos.com/v1alpha2
 kind: OperatorGroup
 metadata:
   name: openshift-storage-operatorgroup
@@ -12,7 +12,7 @@ spec:
   targetNamespaces:
     - openshift-storage
 ---
-apiVersion: operators.coreos.com/v1
+apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: odf-operator
@@ -24,7 +24,7 @@ spec:
   source: redhat-operators
   sourceNamespace: openshift-marketplace
 ---
-apiVersion: operators.coreos.com/v1
+apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: ocs-operator
@@ -36,7 +36,7 @@ spec:
   source: redhat-operators
   sourceNamespace: openshift-marketplace
 ---
-apiVersion: operators.coreos.com/v1
+apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: mcg-operator
@@ -48,7 +48,7 @@ spec:
   source: redhat-operators
   sourceNamespace: openshift-marketplace
 ---
-apiVersion: odf.openshift.io/v1
+apiVersion: odf.openshift.io/v1alpha1
 kind: StorageSystem
 metadata:
   name: ocs-storagecluster-storagesystem
@@ -101,4 +101,3 @@ spec:
     replica: 3
     resources: {}
   version: 4.9.0
-
