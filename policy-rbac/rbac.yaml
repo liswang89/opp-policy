@@ -14,12 +14,13 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
   name: policy-configure-clusterlevel-rbac
+  namespace: policies
   annotations:
     policy.open-cluster-management.io/standards: NIST SP 800-53
     policy.open-cluster-management.io/categories: AC Access Control
     policy.open-cluster-management.io/controls: AC-3 Access Enforcement
 spec:
-  remediationAction: enforce
+  remediationAction: inform
   disabled: false
   policy-templates:
     - objectDefinition:
@@ -28,7 +29,7 @@ spec:
         metadata:
           name: policy-configure-clusterlevel-rbac-example
         spec:
-          remediationAction: enforce
+          remediationAction: inform
           severity: high
           object-templates:
             - complianceType: musthave
@@ -94,6 +95,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-configure-clusterlevel-rbac
+  namespace: policies
 placementRef:
   name: placement-policy-configure-clusterlevel-rbac
   kind: PlacementRule
@@ -107,6 +109,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: placement-policy-configure-clusterlevel-rbac
+  namespace: policies
 spec:
   clusterConditions:
     - status: "True"
